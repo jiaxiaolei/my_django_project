@@ -1,5 +1,8 @@
 # my_django_project
 
+$ django-admin startproject project_001
+
+$ cd project_001
 
 $ python manage.py runserver
 Performing system checks...
