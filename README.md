@@ -39,6 +39,18 @@ Running migrations:
   Applying auth.0008_alter_user_username_max_length... OK
   Applying sessions.0001_initial... OK
 ```
+再次启动：
+
+```
+ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 08, 2017 - 05:44:02
+Django version 1.11.3, using settings 'project_001.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+```
 
 通过 http://ip:8000/ 在浏览器中进行访问，提示：
 
