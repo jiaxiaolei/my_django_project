@@ -28,3 +28,13 @@ Quit the server with CONTROL-C.
 请在 Google 中搜索“172 8000”
 ERR_CONNECTION_REFUSED
 ```
+
+修改 project_001/settings.py 文件
+
+```
+ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = []
+```
+再次启动 
+$ python manage.py runserver
+
