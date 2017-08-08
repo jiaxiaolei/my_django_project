@@ -66,6 +66,11 @@ Next, start your first app by running python manage.py startapp [app_label].
 You're seeing this message because you have DEBUG = True in your Django settings file and you haven't configured any URLs. Get to work!
 ```
 
+创建app
+
+$ python manage.py startapp app_001
+
+
 
 通过 http://ip:8000/ 在浏览器中进行访问，提示：
 
@@ -85,4 +90,19 @@ ALLOWED_HOSTS = ['*']
 ```
 再次启动 
 $ python manage.py runserver
+
+启动项目新增 0.0.0.：8000
+```
+$ python manage.py runserver 0.0.0.0:8000
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 08, 2017 - 05:51:40
+Django version 1.11.3, using settings 'project_001.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+
+[08/Aug/2017 05:51:43] "GET / HTTP/1.1" 200 1716
+```
 
