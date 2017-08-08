@@ -52,6 +52,21 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
+访问页面：
+
+$ w3m http://127.0.0.1:8000
+
+```
+It worked!
+
+Congratulations on your first Django-powered page.
+
+Next, start your first app by running python manage.py startapp [app_label].
+
+You're seeing this message because you have DEBUG = True in your Django settings file and you haven't configured any URLs. Get to work!
+```
+
+
 通过 http://ip:8000/ 在浏览器中进行访问，提示：
 
 ```
