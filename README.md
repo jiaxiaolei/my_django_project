@@ -106,3 +106,16 @@ Quit the server with CONTROL-C.
 [08/Aug/2017 05:51:43] "GET / HTTP/1.1" 200 1716
 ```
 
+此时，通过浏览器可以访问。默认提供 /admin url.
+
+http://172.28.32.49:8000/admin
+
+
+创建一组账号：root/jia123456
+$ python manage.py createsuperuser
+Username (leave blank to use 'root'):
+Email address:
+Password:
+Password (again):
+Superuser created successfully.
+
