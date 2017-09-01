@@ -17,10 +17,19 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import include
 
+from rest_framework.authentication import BasicAuthentication, SessionAuthentication
+from rest_framework.permissions import IsAuthenticated
+from rest_framework import authentication, permissions
+
+authentication_classes = (SessionAuthentication)
+#authentication_classes = (SessionAuthentication, MyBasicAuthentication)
+#permission_classes = (IsAuthenticated,)
+permission_classes = [permissions.AllowAny]
+
+#import ipdb; ipdb.set_trace();
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    #url(r'^admin/', admin.site.urls),
+    #url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^docs/', include('django_rest_swagger_docstring.urls', namespace='docs')),
 ]
