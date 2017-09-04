@@ -3,8 +3,8 @@ import unittest
  
  
 def division_funtion(x, y):
-    #return x / y
-    return round(float(x) / y, 6)
+    return x / y
+    #return round(float(x) / y, 6)
  
  
 class TestDivision(unittest.TestCase):
