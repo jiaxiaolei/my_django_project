@@ -5,10 +5,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-
 from django.db import models
-
-# Create your models here.
 
 class User(models.Model): 
     name = models.CharField(max_length=20)
@@ -19,3 +16,12 @@ class User(models.Model):
 
     def __str__(self): 
         return "%s: %s" % (self.name, self.amount)
+
+class UserProfile(models.Model):  
+#class Total(models.Model):  
+  
+    user = models.OneToOneField(User)  
+    name = models.CharField(max_length=32)  
+  
+    def __unicode__(self):  
+        return self.name  
