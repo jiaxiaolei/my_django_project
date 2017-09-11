@@ -18,4 +18,4 @@ class User(models.Model):
     comments = models.CharField(max_length=30, blank=True)
 
     def __str__(self): 
-        return "%s" % self.name
+        return "%s: %s" % (self.name, self.amount)
