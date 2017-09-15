@@ -14,7 +14,7 @@ admin.site.register(User)
 class TotalAdmin(admin.ModelAdmin):  
 
     #list_display = ('get_user_article')  
-    list_display = ('name','get_user_article')  
+    list_display = ('name','get_user_article', 'test', 'test2')  
   
     def get_user_article(self,user_id):  
         ret = User.objects.all()  
@@ -24,6 +24,21 @@ class TotalAdmin(admin.ModelAdmin):
         return sum  
   
     get_user_article.short_description = u'sum'
+  
+    def test(self, user_id):  
+        return  '2.5%'  
+
+    def test2(self, user_id):  
+        ret = User.objects.all()  
+        sum = 0
+        for item in ret:
+            sum = sum + item.amount
+        return sum * 0.025
+  
+    get_user_article.short_description = u'sum'
+    test.short_description = u'tax rate'
+    test2.short_description = u'tax'
+ 
   
 admin.site.register(UserProfile, TotalAdmin)  
 #admin.site.register(Total, TotalAdmin)  
