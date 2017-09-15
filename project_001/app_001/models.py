@@ -15,7 +15,7 @@ class User(models.Model):
     comments = models.CharField(max_length=30, blank=True)
 
     def __str__(self): 
-        return "%s: %s" % (self.name, self.amount)
+        return "%s: %s: %s" % (self.name, self.amount, self.amount * 0.025)
 
 class UserProfile(models.Model):  
 #class Total(models.Model):  
