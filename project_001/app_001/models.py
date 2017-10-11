@@ -6,6 +6,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 from django.db import models
+from django.conf import settings
 
 class User(models.Model): 
     name = models.CharField(max_length=20)
@@ -15,7 +16,9 @@ class User(models.Model):
     comments = models.CharField(max_length=30, blank=True)
 
     def __str__(self): 
-        return "%s: %s %s %s" % (self.name, self.amount, u' * 2.5% = ', self.amount * 0.025)
+        return "%s: %s %s %s" % (self.name, self.amount, u' * ' + settings.TAX_RATE_STR + ' = ', self.amount * settings.TAX_RATE)
+        #return "%s: %s %s %s" % (self.name, self.amount, u' * 2.5% = ', self.amount * settings.TAX_RATE)
+        #return "%s: %s %s %s" % (self.name, self.amount, u' * 2.5% = ', self.amount * 0.025)
 
 class UserProfile(models.Model):  
 #class Total(models.Model):  

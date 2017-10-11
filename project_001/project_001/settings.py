@@ -17,6 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # 2.5%
 TAX_RATE = 0.025 
+TAX_RATE_STR = "2.5%"
 
 
 # Quick-start development settings - unsuitable for production
